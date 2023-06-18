@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Week8.AppBarOverlay"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.Week8.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/ketoprak"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="212dp"
+        android:contentDescription="@string/rasanya_yang_lezat_nutrisi_yang_seimbang_ketoprak_selalu_jadi_pilihan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_menu_makanan"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ketoprak"
+        android:onClick="showKetoprakOrder"/>
+
+    <TextView
+        android:id="@+id/title_menu_makanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Menu Makanan"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <ImageView
+        android:id="@+id/nasi_goreng"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/nasi_goreng_selera_yang_tiada_tara_jadi_santapan_paling_favorit_di_hati"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ketoprak"
+        app:srcCompat="@drawable/nasigoreng"
+        android:onClick="showNasiGorengOrder"/>
+
+    <ImageView
+        android:id="@+id/ayam_katsu"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/ayam_katsu_gurih_renyah_menggoda_bikin_lidah_ketagihan_dan_hati_senang_selalu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nasi_goreng"
+        app:srcCompat="@drawable/ayamkatsu"
+        android:onClick="showAyamKatsukOrder"/>
+
+    <TextView
+        android:id="@+id/deskripsi_ketoprak"
+        android:layout_width="176dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/rasanya_yang_lezat_nutrisi_yang_seimbang_ketoprak_selalu_jadi_pilihan"
+        app:layout_constraintBottom_toBottomOf="@+id/ketoprak"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/ketoprak"
+        app:layout_constraintTop_toTopOf="@+id/ketoprak" />
+
+    <TextView
+        android:id="@+id/deskripsi_nasigoreng"
+        android:layout_width="191dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/nasi_goreng_selera_yang_tiada_tara_jadi_santapan_paling_favorit_di_hati"
+        app:layout_constraintBottom_toBottomOf="@+id/nasi_goreng"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toEndOf="@+id/nasi_goreng"
+        app:layout_constraintTop_toTopOf="@+id/nasi_goreng" />
+
+    <TextView
+        android:id="@+id/deskripsi_ayamkatsu"
+        android:layout_width="186dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/ayam_katsu_gurih_renyah_menggoda_bikin_lidah_ketagihan_dan_hati_senang_selalu"
+        app:layout_constraintBottom_toBottomOf="@+id/ayam_katsu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.968"
+        app:layout_constraintStart_toEndOf="@+id/ayam_katsu"
+        app:layout_constraintTop_toTopOf="@+id/ayam_katsu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

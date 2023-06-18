@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Module41</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="rasanya_yang_lezat_nutrisi_yang_seimbang_ketoprak_selalu_jadi_pilihan">Rasanya yang lezat, nutrisi yang seimbang, ketoprak selalu jadi pilihan!</string>
+    <string name="nasi_goreng_selera_yang_tiada_tara_jadi_santapan_paling_favorit_di_hati">Nasi goreng, selera yang tiada tara, jadi santapan paling favorit di hati!</string>
+    <string name="ayam_katsu_gurih_renyah_menggoda_bikin_lidah_ketagihan_dan_hati_senang_selalu">Ayam katsu, gurih renyah menggoda, bikin lidah ketagihan dan hati senang selalu!</string>
+
+    <string name="nasi_goreng_order_message">Kamu memesan nasi goreng.</string>
+    <string name="ketoprak_order_message">Kamu memesan ketoprak.</string>
+    <string name="ayam_katsu_order_message">Kamu memesan ayam katsu.</string>
+
+
+</resources>
