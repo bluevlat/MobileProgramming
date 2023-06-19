@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#FFE4E1">
 
     <TextView
         android:layout_width="match_parent"
@@ -17,13 +18,16 @@
         android:text="@string/article_title"/>
 
     <TextView
+        android:id="@+id/article_subheading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/article_subheading"
         android:layout_below="@+id/article_heading"
         android:padding="@dimen/padding_reguler"
+        android:text="@string/article_subtitle"
+        android:textAlignment="center"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault"
-        android:text="@string/article_subtitle"/>
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -42,17 +46,21 @@
                 android:autoLink="web"
                 android:lineSpacingExtra="5sp"
                 android:padding="@dimen/padding_reguler"
-                android:text="@string/article_text" />
+                android:text="@string/article_text"
+                tools:ignore="VisualLintLongText"
+                android:textColor="@color/black"
+                />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/button_selesai"
+                android:id="@+id/button_done"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:onClick="launchSecondActivity"
-                android:text="selesai"
-                android:layout_below="@+id/article_subheading" />
+                android:text="@string/done"
+                android:layout_below="@+id/article_subheading"
+                tools:ignore="ObsoleteLayoutParam,VisualLintButtonSize" />
         </LinearLayout>
     </ScrollView>
 

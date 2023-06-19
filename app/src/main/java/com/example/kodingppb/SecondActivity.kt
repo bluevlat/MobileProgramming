@@ -10,11 +10,11 @@ class SecondActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        supportActionBar?.setTitle("Halaman Kedua")
+        supportActionBar?.setTitle("Second Page")
 
-        val tombolKembali = findViewById < Button > (R.id.kembali)
+        val tombolBack = findViewById < Button > (R.id.back)
 
-        tombolKembali.setOnClickListener {
+        tombolBack.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }

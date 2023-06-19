@@ -11,11 +11,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        supportActionBar?.setTitle("Halaman Pertama")
+        supportActionBar?.setTitle("First Page")
 
-        val buttonSelesai = findViewById<Button>(R.id.button_selesai)
+        val buttonDone = findViewById<Button>(R.id.button_done)
 
-        buttonSelesai.setOnClickListener {
+        buttonDone.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
         }
