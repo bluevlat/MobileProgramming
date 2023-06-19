@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name">Scorekeeper</string>
-    <string name="team_1">Team 1</string>
-    <string name="team_2">Team 2</string>
+    <string name="module51">Choose Mode</string>
+    <string name="team_1">Team Y</string>
+    <string name="team_2">Team O</string>
+    <string name="team_3">Team L</string>
+    <string name="team_4">Team A</string>
     <string name="initial_count">0</string>
     <string name="minus_button_description">Minus Button</string>
     <string name="plus_button_description">Plus Button</string>

@@ -9,54 +9,74 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
 
 class MainActivity : AppCompatActivity() {
-    // Variabel anggota untuk menyimpan skor
+    // member variable to save the score
     private var mScore1: Int = 0
     private var mScore2: Int = 0
+    private var mScore3: Int = 0
+    private var mScore4: Int = 0
 
-    // Variabel anggota untuk dua elemen TextView skor
+    // member variable for 2 element TextView score
     private lateinit var mScoreText1: TextView
     private lateinit var mScoreText2: TextView
+    private lateinit var mScoreText3: TextView
+    private lateinit var mScoreText4: TextView
 
-    // Tag yang akan digunakan sebagai kunci dalam OnSavedInstanceState
+    // Tag that we use for the key in OnSavedInstanceState
     companion object {
-        const val STATE_SCORE_1 = "Skor Tim 1"
-        const val STATE_SCORE_2 = "Skor Tim 2"
+        const val STATE_SCORE_1 = "Score Tim 1"
+        const val STATE_SCORE_2 = "Score Tim 2"
+        const val STATE_SCORE_3 = "Score Tim 3"
+        const val STATE_SCORE_4 = "Score Tim 4"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Temukan TextViews berdasarkan ID
+        // find the TextViews based on ID
         mScoreText1 = findViewById(R.id.score_1)
         mScoreText2 = findViewById(R.id.score_2)
+        mScoreText3 = findViewById(R.id.score_3)
+        mScoreText4 = findViewById(R.id.score_4)
 
-        // Mengembalikan skor jika ada savedInstanceState.
+        // give back the score if there is savedInstanceState.
         if (savedInstanceState != null) {
             mScore1 = savedInstanceState.getInt(STATE_SCORE_1)
             mScore2 = savedInstanceState.getInt(STATE_SCORE_2)
+            mScore3 = savedInstanceState.getInt(STATE_SCORE_3)
+            mScore4 = savedInstanceState.getInt(STATE_SCORE_4)
 
-            // Tetapkan TextView skor
+            // set the TextView score
             mScoreText1.text = mScore1.toString()
             mScoreText2.text = mScore2.toString()
+            mScoreText3.text = mScore3.toString()
+            mScoreText4.text = mScore4.toString()
         }
     }
 
     fun decreaseScore(view: View) {
-        // Dapatkan ID tombol yang diklik.
+        // get the IDs button.
         val viewID = view.id
         when (viewID) {
-            // Jika itu adalah Tim 1:
+            // Team1:
             R.id.decreaseTeam1 -> {
-                // Kurangi skor dan perbarui TextView.
                 mScore1--
                 mScoreText1.text = mScore1.toString()
             }
-            // Jika itu adalah Tim 2:
+            // Team2:
             R.id.decreaseTeam2 -> {
-                // Kurangi skor dan perbarui TextView.
                 mScore2--
                 mScoreText2.text = mScore2.toString()
+            }
+            // Team3:
+            R.id.decreaseTeam3 -> {
+                mScore3--
+                mScoreText3.text = mScore3.toString()
+            }
+            // Team4:
+            R.id.decreaseTeam4 -> {
+                mScore4--
+                mScoreText4.text = mScore4.toString()
             }
         }
     }
@@ -65,24 +85,32 @@ class MainActivity : AppCompatActivity() {
         // Dapatkan ID tombol yang diklik.
         val viewID = view.id
         when (viewID) {
-            // Jika itu adalah Tim 1:
+            // Team1:
             R.id.increaseTeam1 -> {
-                // Tambahkan skor dan perbarui TextView.
                 mScore1++
                 mScoreText1.text = mScore1.toString()
             }
-            // Jika itu adalah Tim 2:
+            // Team2:
             R.id.increaseTeam2 -> {
-                // Tambahkan skor dan perbarui TextView.
                 mScore2++
                 mScoreText2.text = mScore2.toString()
+            }
+            // Team3:
+            R.id.increaseTeam3 -> {
+                mScore3++
+                mScoreText3.text = mScore3.toString()
+            }
+            // Team4:
+            R.id.increaseTeam4 -> {
+                mScore4++
+                mScoreText4.text = mScore4.toString()
             }
         }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
-        // Ubah label menu berdasarkan status aplikasi.
+        // change the menu's label based on the app's status.
         val nightMode = AppCompatDelegate.getDefaultNightMode()
         if (nightMode == AppCompatDelegate.MODE_NIGHT_YES) {
             menu.findItem(R.id.night_mode).setTitle(R.string.day_mode)
@@ -93,26 +121,25 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Periksa apakah item yang benar telah diklik.
+        // check is the click's item right.
         if (item.itemId == R.id.night_mode) {
-            // Dapatkan mode malam aplikasi.
             val nightMode = AppCompatDelegate.getDefaultNightMode()
-            // Atur mode tema untuk aktivitas yang di-recreate.
             if (nightMode == AppCompatDelegate.MODE_NIGHT_YES) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             } else {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             }
-            // Membuat ulang aktivitas agar perubahan tema berlaku.
             recreate()
         }
         return true
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
-        // Simpan skor.
+        // save score.
         outState.putInt(STATE_SCORE_1, mScore1)
         outState.putInt(STATE_SCORE_2, mScore2)
+        outState.putInt(STATE_SCORE_3, mScore3)
+        outState.putInt(STATE_SCORE_4, mScore4)
         super.onSaveInstanceState(outState)
     }
 }
