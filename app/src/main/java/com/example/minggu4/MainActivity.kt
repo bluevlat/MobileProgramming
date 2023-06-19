@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     companion object {
-        const val EXTRA_MESSAGE = "com.example.minggu4.extra.MESSAGE"
+        const val EXTRA_MESSAGE = "com.example.module21.extra.MESSAGE"
     }
 
     private val LOG_TAG = MainActivity::class.simpleName
