@@ -9,12 +9,10 @@ import android.widget.Toast
 import android.widget.*
 
 class MainActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // EditText
         val editText = findViewById<EditText>(R.id.editText)
         val textButton = findViewById<Button>(R.id.textButton)
         textButton.setOnClickListener {
@@ -22,7 +20,6 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Input Text: $inputText", Toast.LENGTH_SHORT).show()
         }
 
-        // CheckBox
         val checkBox = findViewById<CheckBox>(R.id.checkBox)
         val checkButton = findViewById<Button>(R.id.checkButton)
         checkButton.setOnClickListener {
@@ -30,8 +27,6 @@ class MainActivity : AppCompatActivity() {
             val resultText = if (isChecked) "checked" else "unchecked"
             Toast.makeText(this, "Checkbox is $resultText", Toast.LENGTH_SHORT).show()
         }
-
-        // RadioButtons
         val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
         val radioButton1 = findViewById<RadioButton>(R.id.radioButton1)
         val radioButton2 = findViewById<RadioButton>(R.id.radioButton2)
@@ -43,11 +38,9 @@ class MainActivity : AppCompatActivity() {
             val selectedText = selectedRadioButton.text.toString()
             Toast.makeText(this, "Selected radio button: $selectedText", Toast.LENGTH_SHORT).show()
         }
-
-        // Spinner
         val spinner = findViewById<Spinner>(R.id.spinner)
         val spinnerButton = findViewById<Button>(R.id.spinnerButton)
-        val spinnerValues = arrayOf("Value 1", "Value 2", "Value 3")
+        val spinnerValues = arrayOf("Female", "Male")
         val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, spinnerValues)
         spinner.adapter = spinnerAdapter
         spinnerButton.setOnClickListener {
