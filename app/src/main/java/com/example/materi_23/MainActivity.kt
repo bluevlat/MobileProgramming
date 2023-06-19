@@ -12,15 +12,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun openYoutube(view: View) {
+    fun openYoutube2(view: View) {
         val intent = Intent(Intent.ACTION_VIEW)
-        intent.data = Uri.parse("https://www.youtube.com")
+        intent.data = Uri.parse("https://youtu.be/CnVVjLOGVoY")
         startActivity(intent)
     }
 
-    fun openGoogle(view: View) {
+    fun openYoutube1(view: View) {
         val intent = Intent(Intent.ACTION_VIEW)
-        intent.data = Uri.parse("https://www.google.com")
+        intent.data = Uri.parse("https://youtu.be/4lQZ3zd1IKg")
         startActivity(intent)
     }
 }

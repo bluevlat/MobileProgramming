@@ -7,24 +7,33 @@
     android:paddingTop="16dp"
     android:paddingRight="16dp"
     android:paddingBottom="16dp"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#FFE4E1">
 
     <Button
-        android:id="@+id/openUrlButton"
+        android:id="@+id/openYoutube1Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Buka Youtube"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="54dp"
         android:layout_marginBottom="16dp"
-        android:onClick="openYoutube" />
+        android:onClick="openYoutube1"
+        android:text="Jaehyun - Can't take my eyes off u" />
 
     <Button
-        android:id="@+id/openGoogleButton"
+        android:id="@+id/openYoutube2Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Buka Google"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/openUrlButton"
-        android:onClick="openGoogle" />
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="309dp"
+        android:onClick="openYoutube2"
+        android:text="Wave to earth - Seasons" />
+
 
 </RelativeLayout>
